@@ -1,1 +1,1 @@
-# kesäopinnot 25/05/22
+# kesäopinnot 26/05/22
