@@ -1,0 +1,3 @@
+käyttäjä avaa sivun
+
+sivu lataa html css js + muun datan
