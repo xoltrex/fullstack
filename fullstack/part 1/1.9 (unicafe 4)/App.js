@@ -17,7 +17,7 @@ const App = () => {
   }
 
   const handleNeutralClick = () => {
-    setClicks(clicks.concat(neutral))
+    setClicks(clicks.concat(neutral)) //no shame i tried for ages to come up with another way to do this and gave up
     setNeutral(neutral + 1)
   }
 
