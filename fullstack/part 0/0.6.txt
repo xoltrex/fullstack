@@ -1,5 +1,0 @@
-käyttäjä kirjoittaa annettuun kenttään ja tallentaa
-
-se tallennetaan json tiedostoon
-
-js lukee datan ja muokkaa html tiedostoa

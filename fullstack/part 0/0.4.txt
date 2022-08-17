@@ -1,9 +1,0 @@
-käyttäjä kirjoittaa annettuun kenttään ja tallentaa
-
-kirjoitettu teksti lähetetään palvelimelle
-
-palvelin ottaa tekstin ja tallentaa sen
-
-palvelin renderöi tekstin sivulle
-
-sivu päivittyy näyttämään uuden tekstin
