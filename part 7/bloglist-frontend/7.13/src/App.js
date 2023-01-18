@@ -8,8 +8,6 @@ import Notification from './components/Notification'
 import Togglable from './components/Togglable'
 
 import loginService from './services/loginService'
-import userService from './services/userService'
-import loginService from './services/loginService'
 
 import {createNotification} from './reducers/notificationReducer'
 import {loginUser, logoutUser, initializeUser} from './reducers/userReducer'
