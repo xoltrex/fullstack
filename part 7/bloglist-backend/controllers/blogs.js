@@ -10,6 +10,19 @@ router.get('/', async (request, response) => {
   response.json(notes)
 })
 
+router.get('/:id', async (request, response) => {
+  const blog = await Blog.findById(request.params.id).populate('user', {
+    username: 1,
+    name: 1
+  })
+
+  if (blog) {
+    response.json(blog)
+  } else {
+    response.status(404).end()
+  }
+})
+
 router.post('/', async (request, response) => {
   if (!request.user) {
     return response.status(401).json({ error: 'token missing or invalid' })
@@ -54,7 +67,19 @@ router.put('/:id', async (request, response) => {
     new: true,
     runValidators: true,
     context: 'query'
-  }).populate('user', { username: 1, name: 1 })
+  }).populate('user', {username: 1, name: 1})
+
+  response.json(updatedBlog)
+})
+
+router.post('/:id/comments', async (request, response) => {
+  const blog = request.body
+
+  const updatedBlog = await Blog.findByIdAndUpdate(request.params.id, blog, {
+    new: true,
+    runValidators: true,
+    context: 'query'
+  }).populate('user', {username: 1, name: 1})
 
   response.json(updatedBlog)
 })

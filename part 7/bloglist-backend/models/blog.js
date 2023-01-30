@@ -7,7 +7,8 @@ const schema = mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
-  }
+  },
+  comments: [{type: String}]
 })
 
 schema.set('toJSON', {
